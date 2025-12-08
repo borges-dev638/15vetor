@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Ex5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] A = new int[10];
+
+        System.out.println("Digite 10 números:");
+        for (int i = 0; i < 10; i++) {
+            A[i] = sc.nextInt();
+        }
+
+        for (int x : A) {
+            System.out.print("Divisores de " + x + ": ");
+            for (int d = 1; d <= x; d++) {
+                if (x % d == 0) {
+                    System.out.print(d + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}

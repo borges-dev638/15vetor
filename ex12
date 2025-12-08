@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Ex12 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String[] S = new String[10];
+
+        for (int i = 0; i < 10; i++) {
+            S[i] = sc.nextLine();
+        }
+
+        String tentativa = sc.nextLine();
+        boolean ok = false;
+
+        for (int i = 0; i < 10; i++) {
+            if (S[i].equals(tentativa)) ok = true;
+        }
+
+        if (ok) System.out.println("Senha correta");
+        else System.out.println("Senha incorreta");
+    }
+}

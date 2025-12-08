@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Ex13 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] A = new int[10];
+        for (int i = 0; i < 10; i++) A[i] = sc.nextInt();
+
+        boolean pal = true;
+
+        for (int i = 0; i < 5; i++) {
+            if (A[i] != A[9 - i]) pal = false;
+        }
+
+        if (pal)
+            System.out.println("É palindromo");
+        else
+            System.out.println("Não é palindromo");
+    }
+}
